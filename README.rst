@@ -54,7 +54,7 @@ and use it after::
         index.add_point(GeoPoint(lat, lng, ref=airport))
 
     center_point = GeoPoint(37.7772448, -122.3955118)
-    for distance, point in index.get_nearest_points(center_point, 10, 'km'):
+    for point, distance  in index.get_nearest_points(center_point, 10, 'km'):
         print("We airport {0} in {1} km".format(point.ref, distance))
 
 
